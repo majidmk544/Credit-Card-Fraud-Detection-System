@@ -5,9 +5,9 @@ import joblib
 # =====================
 # LOAD MODELS & SCALER
 # =====================
-model_lr = joblib.load("model_lr.pkl")     # Logistic Regression (Stage 1)
-model_xgb = joblib.load("model_xgb.pkl")   # XGBoost (Stage 2)
-scaler = joblib.load("scaler.pkl")         # StandardScaler used in training
+model_lr = joblib.load("Notebooks/App/model_lr.pkl")
+model_xgb = joblib.load("Notebooks/App/model_xgb.pkl")
+scaler = joblib.load("Notebooks/App/scaler.pkl")
 
 # Tuned thresholds
 T1 = 0.05
