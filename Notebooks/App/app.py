@@ -1,13 +1,15 @@
 import streamlit as st
 import numpy as np
 import joblib
-
+import os
 # =====================
 # LOAD MODELS & SCALER
 # =====================
-model_lr = joblib.load("Notebooks/App/model_lr.pkl")
-model_xgb = joblib.load("Notebooks/App/model_xgb.pkl")
-scaler = joblib.load("Notebooks/App/scaler.pkl")
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+model_lr = joblib.load(os.path.join(BASE_DIR, "model_lr.pkl"))
+model_xgb = joblib.load(os.path.join(BASE_DIR, "model_xgb.pkl"))
+scaler = joblib.load(os.path.join(BASE_DIR, "scaler.pkl"))
 
 # Tuned thresholds
 T1 = 0.05
